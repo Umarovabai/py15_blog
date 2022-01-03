@@ -11,12 +11,12 @@ class UserManager(BaseUserManager):
         return user
 
     def create_user(self, phone, password, name, **extra_fields):
-        extra_fields.setdefault('is_activate', False)
+        extra_fields.setdefault('is_active', False)
         extra_fields.setdefault('is_staff', False)
         return self._create(phone, password, name, **extra_fields)
 
     def create_superuser(self, phone, password, name, **extra_fields):
-        extra_fields.setdefault('is_activate', True)
+        extra_fields.setdefault('is_active', True)
         extra_fields.setdefault('is_staff', True)
         return self._create(phone, password, name, **extra_fields)
 
