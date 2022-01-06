@@ -138,6 +138,13 @@ AUTH_USER_MODEL = 'account.User'
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 5
+    'PAGE_SIZE': 5,
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ]
 
 }
+
+TWILIO_NUMBER = '+15018198108'
+TWILIO_SID = 'AC8e1abde55f5c44e7ea89a5038ce153e5'
+TWILIO_AUTH_TOKEN = '8ed0a15bcea238661598cfc9ae39d7bd'
